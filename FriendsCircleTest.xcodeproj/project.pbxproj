@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		B15A11811D34CA6400067AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11801D34CA6400067AB3 /* main.m */; };
 		B15A11841D34CA6400067AB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11831D34CA6400067AB3 /* AppDelegate.m */; };
-		B15A11871D34CA6400067AB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11861D34CA6400067AB3 /* ViewController.m */; };
 		B15A118A1D34CA6400067AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15A11881D34CA6400067AB3 /* Main.storyboard */; };
 		B15A118C1D34CA6400067AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15A118B1D34CA6400067AB3 /* Assets.xcassets */; };
-		B15A118F1D34CA6400067AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15A118D1D34CA6400067AB3 /* LaunchScreen.storyboard */; };
 		B15A119A1D34CA6400067AB3 /* FriendsCircleTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11991D34CA6400067AB3 /* FriendsCircleTestTests.m */; };
+		B15A11AC1D34DEBB00067AB3 /* LYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11AB1D34DEBB00067AB3 /* LYBaseController.m */; };
+		B15A11AF1D34DF8B00067AB3 /* LYMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11AE1D34DF8B00067AB3 /* LYMainController.m */; };
+		B15A11B21D34E2F600067AB3 /* LYBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11B11D34E2F600067AB3 /* LYBaseTableController.m */; };
+		B15A11B51D34F19100067AB3 /* main_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15A11B41D34F19100067AB3 /* main_test.jpg */; };
+		B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11B91D34F2C600067AB3 /* UIViewExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +34,22 @@
 		B15A11801D34CA6400067AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B15A11821D34CA6400067AB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B15A11831D34CA6400067AB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B15A11851D34CA6400067AB3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B15A11861D34CA6400067AB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B15A11891D34CA6400067AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B15A118B1D34CA6400067AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B15A118E1D34CA6400067AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B15A11901D34CA6400067AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B15A11951D34CA6400067AB3 /* FriendsCircleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsCircleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15A11991D34CA6400067AB3 /* FriendsCircleTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsCircleTestTests.m; sourceTree = "<group>"; };
 		B15A119B1D34CA6400067AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15A11AA1D34DEBB00067AB3 /* LYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseController.h; sourceTree = "<group>"; };
+		B15A11AB1D34DEBB00067AB3 /* LYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseController.m; sourceTree = "<group>"; };
+		B15A11AD1D34DF8B00067AB3 /* LYMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainController.h; sourceTree = "<group>"; };
+		B15A11AE1D34DF8B00067AB3 /* LYMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainController.m; sourceTree = "<group>"; };
+		B15A11B01D34E2F600067AB3 /* LYBaseTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseTableController.h; sourceTree = "<group>"; };
+		B15A11B11D34E2F600067AB3 /* LYBaseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseTableController.m; sourceTree = "<group>"; };
+		B15A11B41D34F19100067AB3 /* main_test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_test.jpg; sourceTree = "<group>"; };
+		B15A11B81D34F2C600067AB3 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		B15A11B91D34F2C600067AB3 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		B15A11BB1D34F32200067AB3 /* FriendsCirclePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsCirclePrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +91,18 @@
 		B15A117E1D34CA6400067AB3 /* FriendsCircleTest */ = {
 			isa = PBXGroup;
 			children = (
+				B15A11B61D34F22300067AB3 /* Utils */,
+				B15A11B31D34F15300067AB3 /* Resource */,
+				B15A11A81D34DE9100067AB3 /* Framworks */,
+				B15A11A41D34DD1A00067AB3 /* Managers */,
+				B15A11A51D34DD1A00067AB3 /* Models */,
+				B15A11A61D34DD1A00067AB3 /* ViewControllers */,
+				B15A11A71D34DD1A00067AB3 /* Views */,
 				B15A11821D34CA6400067AB3 /* AppDelegate.h */,
 				B15A11831D34CA6400067AB3 /* AppDelegate.m */,
-				B15A11851D34CA6400067AB3 /* ViewController.h */,
-				B15A11861D34CA6400067AB3 /* ViewController.m */,
+				B15A11BB1D34F32200067AB3 /* FriendsCirclePrefixHeader.pch */,
 				B15A11881D34CA6400067AB3 /* Main.storyboard */,
 				B15A118B1D34CA6400067AB3 /* Assets.xcassets */,
-				B15A118D1D34CA6400067AB3 /* LaunchScreen.storyboard */,
 				B15A11901D34CA6400067AB3 /* Info.plist */,
 				B15A117F1D34CA6400067AB3 /* Supporting Files */,
 			);
@@ -109,6 +124,80 @@
 				B15A119B1D34CA6400067AB3 /* Info.plist */,
 			);
 			path = FriendsCircleTestTests;
+			sourceTree = "<group>";
+		};
+		B15A11A41D34DD1A00067AB3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B15A11A51D34DD1A00067AB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B15A11A61D34DD1A00067AB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11AD1D34DF8B00067AB3 /* LYMainController.h */,
+				B15A11AE1D34DF8B00067AB3 /* LYMainController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B15A11A71D34DD1A00067AB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B15A11A81D34DE9100067AB3 /* Framworks */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11A91D34DE9100067AB3 /* Base */,
+			);
+			path = Framworks;
+			sourceTree = "<group>";
+		};
+		B15A11A91D34DE9100067AB3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11AA1D34DEBB00067AB3 /* LYBaseController.h */,
+				B15A11AB1D34DEBB00067AB3 /* LYBaseController.m */,
+				B15A11B01D34E2F600067AB3 /* LYBaseTableController.h */,
+				B15A11B11D34E2F600067AB3 /* LYBaseTableController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B15A11B31D34F15300067AB3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11B41D34F19100067AB3 /* main_test.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B15A11B61D34F22300067AB3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11B71D34F2C600067AB3 /* Categories */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B15A11B71D34F2C600067AB3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B15A11B81D34F2C600067AB3 /* UIViewExt.h */,
+				B15A11B91D34F2C600067AB3 /* UIViewExt.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15A118F1D34CA6400067AB3 /* LaunchScreen.storyboard in Resources */,
+				B15A11B51D34F19100067AB3 /* main_test.jpg in Resources */,
 				B15A118C1D34CA6400067AB3 /* Assets.xcassets in Resources */,
 				B15A118A1D34CA6400067AB3 /* Main.storyboard in Resources */,
 			);
@@ -211,9 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15A11871D34CA6400067AB3 /* ViewController.m in Sources */,
 				B15A11841D34CA6400067AB3 /* AppDelegate.m in Sources */,
+				B15A11B21D34E2F600067AB3 /* LYBaseTableController.m in Sources */,
+				B15A11AC1D34DEBB00067AB3 /* LYBaseController.m in Sources */,
 				B15A11811D34CA6400067AB3 /* main.m in Sources */,
+				B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */,
+				B15A11AF1D34DF8B00067AB3 /* LYMainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,14 +334,6 @@
 				B15A11891D34CA6400067AB3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B15A118D1D34CA6400067AB3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B15A118E1D34CA6400067AB3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,7 +425,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FriendsCircleTest/FriendsCirclePrefixHeader.pch";
 				INFOPLIST_FILE = FriendsCircleTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoperun.FriendsCircleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +440,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FriendsCircleTest/FriendsCirclePrefixHeader.pch";
 				INFOPLIST_FILE = FriendsCircleTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoperun.FriendsCircleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +494,7 @@
 				B15A11A01D34CA6400067AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B15A11A11D34CA6400067AB3 /* Build configuration list for PBXNativeTarget "FriendsCircleTestTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +503,7 @@
 				B15A11A31D34CA6400067AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

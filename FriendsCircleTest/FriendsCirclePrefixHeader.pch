@@ -1,0 +1,17 @@
+//
+//  FriendsCirclePrefixHeader.pch
+//  FriendsCircleTest
+//
+//  Created by 李勇 on 16/7/12.
+//  Copyright © 2016年 李勇. All rights reserved.
+//
+
+#ifndef FriendsCirclePrefixHeader_pch
+#define FriendsCirclePrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIViewExt.h"
+
+#endif /* FriendsCirclePrefixHeader_pch */
