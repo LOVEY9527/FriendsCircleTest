@@ -58,7 +58,8 @@ static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
     //图片网格
     self.imgCollectionViewLayout.itemSize = CGSizeMake((self.imgCollectionView.width - 5 * 2) / 3, self.imgCollectionView.height);
     self.imgCollectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    self.imgCollectionViewLayout.minimumLineSpacing = 5;
+    self.imgCollectionViewLayout.minimumLineSpacing = 0;
+    self.imgCollectionViewLayout.minimumInteritemSpacing = 0;
     self.imgCollectionView.dataSource = self;
     self.imgCollectionView.delegate = self;
     [self.imgCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionViewCellReUseID];

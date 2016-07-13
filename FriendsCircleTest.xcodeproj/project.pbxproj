@@ -17,6 +17,7 @@
 		B1260E991D363C3C005B68F4 /* main_zan.png in Resources */ = {isa = PBXBuildFile; fileRef = B1260E931D363C3C005B68F4 /* main_zan.png */; };
 		B1260E9A1D363C3C005B68F4 /* main_zan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1260E941D363C3C005B68F4 /* main_zan@2x.png */; };
 		B1260E9B1D363C3C005B68F4 /* main_zan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1260E951D363C3C005B68F4 /* main_zan@3x.png */; };
+		B1260E9E1D364479005B68F4 /* LYMainViewHeightManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1260E9D1D364479005B68F4 /* LYMainViewHeightManager.m */; };
 		B15A11811D34CA6400067AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11801D34CA6400067AB3 /* main.m */; };
 		B15A11841D34CA6400067AB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11831D34CA6400067AB3 /* AppDelegate.m */; };
 		B15A118A1D34CA6400067AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15A11881D34CA6400067AB3 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		B1260E931D363C3C005B68F4 /* main_zan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_zan.png; sourceTree = "<group>"; };
 		B1260E941D363C3C005B68F4 /* main_zan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_zan@2x.png"; sourceTree = "<group>"; };
 		B1260E951D363C3C005B68F4 /* main_zan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_zan@3x.png"; sourceTree = "<group>"; };
+		B1260E9C1D364479005B68F4 /* LYMainViewHeightManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainViewHeightManager.h; sourceTree = "<group>"; };
+		B1260E9D1D364479005B68F4 /* LYMainViewHeightManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainViewHeightManager.m; sourceTree = "<group>"; };
 		B15A117C1D34CA6400067AB3 /* FriendsCircleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsCircleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15A11801D34CA6400067AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B15A11821D34CA6400067AB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		B15A11A41D34DD1A00067AB3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B1260E9C1D364479005B68F4 /* LYMainViewHeightManager.h */,
+				B1260E9D1D364479005B68F4 /* LYMainViewHeightManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				B1260E881D3627D6005B68F4 /* LYMainTableViewCell.m in Sources */,
 				B15A11AC1D34DEBB00067AB3 /* LYBaseController.m in Sources */,
 				B15A11811D34CA6400067AB3 /* main.m in Sources */,
+				B1260E9E1D364479005B68F4 /* LYMainViewHeightManager.m in Sources */,
 				B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */,
 				B15A11AF1D34DF8B00067AB3 /* LYMainController.m in Sources */,
 			);
