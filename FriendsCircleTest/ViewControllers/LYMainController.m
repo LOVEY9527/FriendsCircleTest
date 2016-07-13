@@ -7,6 +7,7 @@
 //
 
 #import "LYMainController.h"
+#import "LYMainTableViewCell.h"
 
 static NSString *tableViewCellReUseID = @"tableViewCellReUseID";
 
@@ -31,7 +32,11 @@ static NSString *tableViewCellReUseID = @"tableViewCellReUseID";
 {
     [super initView];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:tableViewCellReUseID];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:tableViewCellReUseID];
+    self.tableView.backgroundColor = UIColorFromRGB(0xececec);
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LYMainTableViewCell class]) bundle:nil] forCellReuseIdentifier:tableViewCellReUseID];
+    self.tableView.rowHeight = 237;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 /**
@@ -72,9 +77,9 @@ static NSString *tableViewCellReUseID = @"tableViewCellReUseID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableViewCellReUseID
-                                                            forIndexPath:indexPath];
-    cell.textLabel.text = @"123";
+    LYMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableViewCellReUseID
+                                                                forIndexPath:indexPath];
+//    cell.textLabel.text = @"123";
     return cell;
 }
 
