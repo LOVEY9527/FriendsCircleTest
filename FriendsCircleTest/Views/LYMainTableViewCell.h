@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LYMainViewHeightManager.h"
 
 @interface LYMainTableViewCell : UITableViewCell
+
+/**
+ *  @author liyong
+ *
+ *  构建单元格
+ *
+ *  @param friendDynamicModel 动态模型
+ */
+- (void)buildCellWithImgModel:(LYFriendDynamicModel *)friendDynamicModel;
 
 @end

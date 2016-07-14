@@ -54,6 +54,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-OC-acs">
                                 <rect key="frame" x="5" y="87" width="300" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XHU-ro-GdB">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -147,17 +148,11 @@
                 </subviews>
                 <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="hUM-fT-FG3" secondAttribute="trailing" constant="-3" id="8wD-sz-fuV"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hUM-fT-FG3" secondAttribute="bottom" constant="-8" id="VJj-T6-W94"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hUM-fT-FG3" secondAttribute="trailing" constant="-3" id="bNN-dM-wUi"/>
                     <constraint firstItem="hUM-fT-FG3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="sMw-sh-af3"/>
                     <constraint firstItem="hUM-fT-FG3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="vgF-kW-G4P"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="8wD-sz-fuV"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressContainView" destination="hrf-ka-nvP" id="h1N-yS-I7e"/>

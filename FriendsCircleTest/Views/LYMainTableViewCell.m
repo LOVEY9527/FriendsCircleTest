@@ -8,7 +8,7 @@
 
 #import "LYMainTableViewCell.h"
 
-static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
+NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUseID";
 
 @interface LYMainTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -38,6 +38,9 @@ static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
 //赞按钮
 @property (weak, nonatomic) IBOutlet UIButton *zanBtn;
 
+//动态模型
+@property (strong, nonatomic) LYFriendDynamicModel *friendDynamicModel;
+
 @end
 
 @implementation LYMainTableViewCell
@@ -46,6 +49,7 @@ static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
 {
     [super awakeFromNib];
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     //容器视图
     self.containView.layer.cornerRadius = 3;
@@ -56,13 +60,12 @@ static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
     self.headerImageView.layer.masksToBounds = YES;
     
     //图片网格
-    self.imgCollectionViewLayout.itemSize = CGSizeMake((self.imgCollectionView.width - 5 * 2) / 3, self.imgCollectionView.height);
     self.imgCollectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    self.imgCollectionViewLayout.minimumLineSpacing = 0;
-    self.imgCollectionViewLayout.minimumInteritemSpacing = 0;
+    self.imgCollectionViewLayout.minimumLineSpacing = kMVHMMiniumInterLineItemSpace;
+    self.imgCollectionViewLayout.minimumInteritemSpacing = kMVHMMiniumInterLineItemSpace;
     self.imgCollectionView.dataSource = self;
     self.imgCollectionView.delegate = self;
-    [self.imgCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionViewCellReUseID];
+    [self.imgCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kMTVCCollectionViewCellReUseID];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -72,16 +75,33 @@ static NSString *collectionViewCellReUseID = @"collectionViewCellReUseID";
     // Configure the view for the selected state
 }
 
+/**
+ *  @author liyong
+ *
+ *  构建单元格
+ *
+ *  @param friendDynamicModel 动态模型
+ */
+- (void)buildCellWithImgModel:(LYFriendDynamicModel *)friendDynamicModel
+{
+    self.friendDynamicModel = friendDynamicModel;
+    
+    //图片网格
+    self.imgCollectionView.height = [LYMainViewHeightManager mainCellImgCollectionViewHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
+    self.imgCollectionViewLayout.itemSize = [LYMainViewHeightManager mainCellImgCollectionCellHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
+    [self.imgCollectionView reloadData];
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.friendDynamicModel.dynamicImgArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellReUseID
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kMTVCCollectionViewCellReUseID
                                                                            forIndexPath:indexPath];
     cell.backgroundColor = [UIColor redColor];
     

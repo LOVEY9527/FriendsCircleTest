@@ -7,6 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LYFriendDynamicModel.h"
+
+//容器视图到单元格边距
+extern CGFloat const kMVHMSpaceOfCellAndContainView;
+//图片网格到容器视图边距
+extern CGFloat const kMVHMSpaceOfContainViewAndImgcollectionView;
+//图片网格中单元格最小的行间距和列间距
+extern CGFloat const kMVHMMiniumInterLineItemSpace;
 
 @interface LYMainViewHeightManager : NSObject
 
@@ -20,5 +28,27 @@
  *  @return
  */
 + (CGSize)mainCellImgCollectionCellHeightWithCount:(NSInteger)imgCount;
+
+/**
+ *  @author liyong
+ *
+ *  计算图片网格的高度
+ *
+ *  @param imgCount 图片个数
+ *
+ *  @return
+ */
++ (CGFloat)mainCellImgCollectionViewHeightWithCount:(NSInteger)imgCount;
+
+/**
+ *  @author liyong
+ *
+ *  根据动态模型计算单元格高度
+ *
+ *  @param friendDynamicModel 动态模型
+ *
+ *  @return
+ */
++ (CGFloat)mainCellHeightWithModel:(LYFriendDynamicModel *)friendDynamicModel;
 
 @end
