@@ -11,6 +11,8 @@
 
 //容器视图到单元格边距
 extern CGFloat const kMVHMSpaceOfCellAndContainView;
+//好友动态的内容字体
+extern CGFloat const kMVHMFriendDynamicContentFontSize;
 //图片网格到容器视图边距
 extern CGFloat const kMVHMSpaceOfContainViewAndImgcollectionView;
 //图片网格中单元格最小的行间距和列间距
@@ -39,6 +41,17 @@ extern CGFloat const kMVHMMiniumInterLineItemSpace;
  *  @return
  */
 + (CGFloat)mainCellImgCollectionViewHeightWithCount:(NSInteger)imgCount;
+
+/**
+ *  @author liyong
+ *
+ *  计算朋友动态的内容的高度
+ *
+ *  @param friendDynamicModel 朋友动态模型
+ *
+ *  @return
+ */
++ (CGFloat)mainCellFriendDynamicContentHeightWithModel:(LYFriendDynamicModel *)friendDynamicModel;
 
 /**
  *  @author liyong

@@ -60,6 +60,7 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
     self.headerImageView.layer.masksToBounds = YES;
     
     //图片网格
+    self.imgCollectionView.scrollsToTop = NO;
     self.imgCollectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.imgCollectionViewLayout.minimumLineSpacing = kMVHMMiniumInterLineItemSpace;
     self.imgCollectionViewLayout.minimumInteritemSpacing = kMVHMMiniumInterLineItemSpace;
@@ -86,10 +87,17 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
 {
     self.friendDynamicModel = friendDynamicModel;
     
+    //动态内容
+    self.dynamicContentLabel.height = [LYMainViewHeightManager mainCellFriendDynamicContentHeightWithModel:self.friendDynamicModel];
+    self.dynamicContentLabel.text = self.friendDynamicModel.dynamicContent;
+    
     //图片网格
     self.imgCollectionView.height = [LYMainViewHeightManager mainCellImgCollectionViewHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
+//    if ([self.friendDynamicModel.dynamicImgArray count] > 0)
+//    {
     self.imgCollectionViewLayout.itemSize = [LYMainViewHeightManager mainCellImgCollectionCellHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
     [self.imgCollectionView reloadData];
+//    }
 }
 
 #pragma mark - UICollectionViewDataSource

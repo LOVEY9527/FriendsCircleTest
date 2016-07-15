@@ -48,54 +48,63 @@ NSString * const kMCTableViewCellReUseID = @"kLMCTableViewCellReUseID";
     
     LYFriendDynamicModel *friendDynamicModel1 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel1.dynamicImgArray = @[@"1"];
+    friendDynamicModel1.dynamicContent = @"你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel1];
     CGFloat cellHeight1 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel1];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight1)];
     
     LYFriendDynamicModel *friendDynamicModel2 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel2.dynamicImgArray = @[@"1", @"2"];
+    friendDynamicModel2.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel2];
     CGFloat cellHeight2 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel2];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight2)];
     
     LYFriendDynamicModel *friendDynamicModel3 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel3.dynamicImgArray = @[@"1", @"2", @"3"];
+    friendDynamicModel3.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel3];
     CGFloat cellHeight3 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel3];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight3)];
     
     LYFriendDynamicModel *friendDynamicModel4 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel4.dynamicImgArray = @[@"1", @"2", @"3", @"4"];
+    friendDynamicModel4.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel4];
     CGFloat cellHeight4 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel4];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight4)];
     
     LYFriendDynamicModel *friendDynamicModel5 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel5.dynamicImgArray = @[@"1", @"2", @"3", @"4", @"5"];
+    friendDynamicModel5.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel5];
     CGFloat cellHeight5 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel5];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight5)];
     
     LYFriendDynamicModel *friendDynamicModel6 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel6.dynamicImgArray = @[@"1", @"2", @"3", @"4", @"5", @"6"];
+    friendDynamicModel6.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel6];
     CGFloat cellHeight6 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel6];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight6)];
     
     LYFriendDynamicModel *friendDynamicModel7 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel7.dynamicImgArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7"];
+    friendDynamicModel7.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel7];
     CGFloat cellHeight7 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel7];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight7)];
     
     LYFriendDynamicModel *friendDynamicModel8 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel8.dynamicImgArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8"];
+    friendDynamicModel8.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel8];
     CGFloat cellHeight8 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel8];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight8)];
     
     LYFriendDynamicModel *friendDynamicModel9 = [[LYFriendDynamicModel alloc] init];
     friendDynamicModel9.dynamicImgArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"];
+    friendDynamicModel9.dynamicContent = @"你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？你有每天喝咖啡的习惯吗？";
     [self.friendDynamicDataSource addObject:friendDynamicModel9];
     CGFloat cellHeight9 = [LYMainViewHeightManager mainCellHeightWithModel:friendDynamicModel9];
     [self.friendDynamicCellHeightDataSource addObject:@(cellHeight9)];

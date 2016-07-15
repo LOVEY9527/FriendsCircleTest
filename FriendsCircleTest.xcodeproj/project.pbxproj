@@ -29,6 +29,7 @@
 		B15A11B51D34F19100067AB3 /* main_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15A11B41D34F19100067AB3 /* main_test.jpg */; };
 		B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11B91D34F2C600067AB3 /* UIViewExt.m */; };
 		B17857AD1D377E5700CD28D3 /* LYFriendDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B17857AC1D377E5700CD28D3 /* LYFriendDynamicModel.m */; };
+		B17857B01D378E2E00CD28D3 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B17857AF1D378E2E00CD28D3 /* NSString+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		B15A11BB1D34F32200067AB3 /* FriendsCirclePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsCirclePrefixHeader.pch; sourceTree = "<group>"; };
 		B17857AB1D377E5700CD28D3 /* LYFriendDynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFriendDynamicModel.h; sourceTree = "<group>"; };
 		B17857AC1D377E5700CD28D3 /* LYFriendDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFriendDynamicModel.m; sourceTree = "<group>"; };
+		B17857AE1D378E2E00CD28D3 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		B17857AF1D378E2E00CD28D3 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 		B15A11B71D34F2C600067AB3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B17857AE1D378E2E00CD28D3 /* NSString+Category.h */,
+				B17857AF1D378E2E00CD28D3 /* NSString+Category.m */,
 				B15A11B81D34F2C600067AB3 /* UIViewExt.h */,
 				B15A11B91D34F2C600067AB3 /* UIViewExt.m */,
 			);
@@ -364,6 +369,7 @@
 				B15A11841D34CA6400067AB3 /* AppDelegate.m in Sources */,
 				B15A11B21D34E2F600067AB3 /* LYBaseTableController.m in Sources */,
 				B17857AD1D377E5700CD28D3 /* LYFriendDynamicModel.m in Sources */,
+				B17857B01D378E2E00CD28D3 /* NSString+Category.m in Sources */,
 				B1260E881D3627D6005B68F4 /* LYMainTableViewCell.m in Sources */,
 				B15A11AC1D34DEBB00067AB3 /* LYBaseController.m in Sources */,
 				B15A11811D34CA6400067AB3 /* main.m in Sources */,
@@ -494,7 +500,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FriendsCircleTest/FriendsCirclePrefixHeader.pch";
 				INFOPLIST_FILE = FriendsCircleTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yum.JPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,7 +517,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FriendsCircleTest/FriendsCirclePrefixHeader.pch";
 				INFOPLIST_FILE = FriendsCircleTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yum.JPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";

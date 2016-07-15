@@ -43,17 +43,14 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你有每天喝咖啡的习惯吗？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umE-x3-7WS">
-                                <rect key="frame" x="9" y="62" width="292" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="R8N-7G-jNH"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你有每天喝咖啡的习惯吗？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umE-x3-7WS">
+                                <rect key="frame" x="9" y="62" width="292" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-OC-acs">
-                                <rect key="frame" x="5" y="87" width="300" height="100"/>
+                                <rect key="frame" x="5" y="90" width="300" height="97"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XHU-ro-GdB">
                                     <size key="itemSize" width="50" height="50"/>
@@ -129,6 +126,7 @@
                             <constraint firstItem="wTv-OC-acs" firstAttribute="top" secondItem="umE-x3-7WS" secondAttribute="bottom" constant="10" id="fq8-ht-HKB"/>
                             <constraint firstItem="wTv-OC-acs" firstAttribute="leading" secondItem="hUM-fT-FG3" secondAttribute="leading" constant="5" id="goK-l5-FEI"/>
                             <constraint firstItem="U8g-Zn-dHz" firstAttribute="top" secondItem="hUM-fT-FG3" secondAttribute="top" constant="13" id="hzQ-rG-0R9"/>
+                            <constraint firstItem="wTv-OC-acs" firstAttribute="top" secondItem="umE-x3-7WS" secondAttribute="bottom" constant="10" id="ieD-iP-mtd"/>
                             <constraint firstItem="D1D-lr-Du8" firstAttribute="top" secondItem="U8g-Zn-dHz" secondAttribute="bottom" constant="6" id="inq-Mv-m4Y"/>
                             <constraint firstItem="umE-x3-7WS" firstAttribute="top" secondItem="D1D-lr-Du8" secondAttribute="bottom" constant="11" id="iqL-XG-chw"/>
                             <constraint firstAttribute="trailing" secondItem="hK4-7a-h0U" secondAttribute="trailing" constant="12" id="nbg-Dx-FzP"/>
@@ -142,6 +140,7 @@
                                 <exclude reference="6aR-kb-Tti"/>
                                 <exclude reference="BS2-ih-OsY"/>
                                 <exclude reference="QYQ-hm-2ns"/>
+                                <exclude reference="fq8-ht-HKB"/>
                             </mask>
                         </variation>
                     </view>
