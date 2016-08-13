@@ -11,6 +11,8 @@
 //容器视图到单元格边距
 CGFloat const kMVHMSpaceOfCellAndContainView = 5.0;
 //好友动态的内容字体
+//(1、c语言中全局变量和static变量的初始化需要指定一个常量，不能是一个非常量的表达式；而在c++中是可以的
+//2、在操作c和c++全局变量时，只能对其采用初始化的方式，而不能采用赋值的方式)
 CGFloat const kMVHMFriendDynamicContentFontSize = 15.0;
 //图片网格到容器视图边距
 CGFloat const kMVHMSpaceOfContainViewAndImgcollectionView = 5.0;

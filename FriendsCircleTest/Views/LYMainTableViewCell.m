@@ -59,6 +59,9 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
     self.headerImageView.layer.cornerRadius = self.headerImageView.width / 2;
     self.headerImageView.layer.masksToBounds = YES;
     
+    //动态内容
+    self.dynamicContentLabel.font = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];
+    
     //图片网格
     self.imgCollectionView.scrollsToTop = NO;
     self.imgCollectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -88,6 +91,7 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
     self.friendDynamicModel = friendDynamicModel;
     
     //动态内容
+    self.dynamicContentLabel.font = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];
     self.dynamicContentLabel.height = [LYMainViewHeightManager mainCellFriendDynamicContentHeightWithModel:self.friendDynamicModel];
     self.dynamicContentLabel.text = self.friendDynamicModel.dynamicContent;
     
