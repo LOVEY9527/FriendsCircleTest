@@ -18,8 +18,34 @@ CGFloat const kMVHMFriendDynamicContentFontSize = 15.0;
 CGFloat const kMVHMSpaceOfContainViewAndImgcollectionView = 5.0;
 //图片网格中单元格最小的行间距和列间距
 CGFloat const kMVHMMiniumInterLineItemSpace = 5.0;
+//好友动态评论内容字体
+CGFloat const kMVHMAppraiseContentFontSize = 14.0;
 
 @implementation LYMainViewHeightManager
+
+/**
+ *  @author liyong
+ *
+ *  计算朋友动态的内容的高度
+ *
+ *  @param friendDynamicModel 朋友动态模型
+ *
+ *  @return
+ */
++ (CGFloat)mainCellFriendDynamicContentHeightWithModel:(LYFriendDynamicModel *)friendDynamicModel
+{
+    if ([friendDynamicModel.dynamicContent length] > 0)
+    {
+        CGFloat defineWidth = App_Frame_Width - (kMVHMSpaceOfCellAndContainView + 9) * 2;
+        UIFont *friendDynamicContentFont = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];
+        CGFloat friendDynamicContentHeight = [friendDynamicModel.dynamicContent strHeightWithDefineWidth:defineWidth
+                                                                                                    font:friendDynamicContentFont];
+        
+        return friendDynamicContentHeight;
+    }
+    
+    return 0;
+}
 
 /**
  *  @author liyong
@@ -98,20 +124,41 @@ CGFloat const kMVHMMiniumInterLineItemSpace = 5.0;
 /**
  *  @author liyong
  *
- *  计算朋友动态的内容的高度
+ *  计算评论内容高度
  *
- *  @param friendDynamicModel 朋友动态模型
+ *  @param appraiseModel 评论模型
  *
  *  @return
  */
-+ (CGFloat)mainCellFriendDynamicContentHeightWithModel:(LYFriendDynamicModel *)friendDynamicModel
++ (CGFloat)mainCellAppraiseContentHeightWithModel:(LYAppraiseModel *)appraiseModel
 {
-    CGFloat defineWidth = App_Frame_Width - (kMVHMSpaceOfCellAndContainView + 9) * 2;
-    UIFont *friendDynamicContentFont = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];
-    CGFloat friendDynamicContentHeight = [friendDynamicModel.dynamicContent strHeightWithDefineWidth:defineWidth
-                                                                                                font:friendDynamicContentFont];
+    CGFloat defineWidth = App_Frame_Width - kMVHMSpaceOfCellAndContainView * 2 - 63 - 8;
+    UIFont *appraiseContentFont = [UIFont systemFontOfSize:kMVHMAppraiseContentFontSize];
+    CGFloat appraiseContentHeight = [appraiseModel.appraiseContent strHeightWithDefineWidth:defineWidth
+                                                                                       font:appraiseContentFont];
     
-    return friendDynamicContentHeight;
+    return appraiseContentHeight;
+}
+
+/**
+ *  @author liyong
+ *
+ *  计算评论单元格高度
+ *
+ *  @param appraiseModel 评论的模型
+ *
+ *  @return
+ */
++ (CGFloat)mainCellAppraiseCellHeightWithModel:(LYAppraiseModel *)appraiseModel
+{
+    CGFloat appraiseContentHeight = [self mainCellAppraiseContentHeightWithModel:appraiseModel];
+    CGFloat totalAppraiseHeight = 17 + 15 + 5 + appraiseContentHeight + 8;
+    if (totalAppraiseHeight < 60)
+    {
+        totalAppraiseHeight = 60;
+    }
+    
+    return totalAppraiseHeight;
 }
 
 /**
@@ -133,6 +180,12 @@ CGFloat const kMVHMMiniumInterLineItemSpace = 5.0;
     //图片网格高度
     CGFloat imgCollectionViewHeight = [LYMainViewHeightManager mainCellImgCollectionViewHeightWithCount:[friendDynamicModel.dynamicImgArray count]];
     cellHeight += imgCollectionViewHeight;
+    //评论的高度
+    for (LYAppraiseModel * _Nonnull obj in friendDynamicModel.appraiseArray)
+    {
+        friendDynamicModel.appraiseListHeight += obj.appraiseCellHeight;
+    }
+    cellHeight += friendDynamicModel.appraiseListHeight;
     
     return cellHeight;
 }

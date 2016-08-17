@@ -30,6 +30,11 @@
 		B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B15A11B91D34F2C600067AB3 /* UIViewExt.m */; };
 		B17857AD1D377E5700CD28D3 /* LYFriendDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B17857AC1D377E5700CD28D3 /* LYFriendDynamicModel.m */; };
 		B17857B01D378E2E00CD28D3 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = B17857AF1D378E2E00CD28D3 /* NSString+Category.m */; };
+		B1CDF0841D62FF0E005D9BCC /* LYZanListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDF0831D62FF0E005D9BCC /* LYZanListView.m */; };
+		B1CDF0871D62FF21005D9BCC /* HYCollectViewAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDF0861D62FF21005D9BCC /* HYCollectViewAlignedLayout.m */; };
+		B1F39FCB1D630B9D004565F1 /* LYAppraiseListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F39FC91D630B9D004565F1 /* LYAppraiseListTableCell.m */; };
+		B1F39FCC1D630B9D004565F1 /* LYAppraiseListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F39FCA1D630B9D004565F1 /* LYAppraiseListTableCell.xib */; };
+		B1F39FCF1D631390004565F1 /* LYAppraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F39FCE1D631390004565F1 /* LYAppraiseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,15 @@
 		B17857AC1D377E5700CD28D3 /* LYFriendDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFriendDynamicModel.m; sourceTree = "<group>"; };
 		B17857AE1D378E2E00CD28D3 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		B17857AF1D378E2E00CD28D3 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		B1CDF0821D62FF0E005D9BCC /* LYZanListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYZanListView.h; sourceTree = "<group>"; };
+		B1CDF0831D62FF0E005D9BCC /* LYZanListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYZanListView.m; sourceTree = "<group>"; };
+		B1CDF0851D62FF21005D9BCC /* HYCollectViewAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCollectViewAlignedLayout.h; sourceTree = "<group>"; };
+		B1CDF0861D62FF21005D9BCC /* HYCollectViewAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCollectViewAlignedLayout.m; sourceTree = "<group>"; };
+		B1F39FC81D630B9D004565F1 /* LYAppraiseListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAppraiseListTableCell.h; sourceTree = "<group>"; };
+		B1F39FC91D630B9D004565F1 /* LYAppraiseListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAppraiseListTableCell.m; sourceTree = "<group>"; };
+		B1F39FCA1D630B9D004565F1 /* LYAppraiseListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYAppraiseListTableCell.xib; sourceTree = "<group>"; };
+		B1F39FCD1D631390004565F1 /* LYAppraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAppraiseModel.h; sourceTree = "<group>"; };
+		B1F39FCE1D631390004565F1 /* LYAppraiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAppraiseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +193,8 @@
 			children = (
 				B17857AB1D377E5700CD28D3 /* LYFriendDynamicModel.h */,
 				B17857AC1D377E5700CD28D3 /* LYFriendDynamicModel.m */,
+				B1F39FCD1D631390004565F1 /* LYAppraiseModel.h */,
+				B1F39FCE1D631390004565F1 /* LYAppraiseModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +211,8 @@
 		B15A11A71D34DD1A00067AB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1CDF0811D62FF0E005D9BCC /* ZanList */,
+				B1F39FC71D630B67004565F1 /* AppraiseList */,
 				B1260E851D3627D6005B68F4 /* LYMainTableViewCell.h */,
 				B1260E861D3627D6005B68F4 /* LYMainTableViewCell.m */,
 				B1260E871D3627D6005B68F4 /* LYMainTableViewCell.xib */,
@@ -255,6 +273,27 @@
 				B15A11B91D34F2C600067AB3 /* UIViewExt.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		B1CDF0811D62FF0E005D9BCC /* ZanList */ = {
+			isa = PBXGroup;
+			children = (
+				B1CDF0851D62FF21005D9BCC /* HYCollectViewAlignedLayout.h */,
+				B1CDF0861D62FF21005D9BCC /* HYCollectViewAlignedLayout.m */,
+				B1CDF0821D62FF0E005D9BCC /* LYZanListView.h */,
+				B1CDF0831D62FF0E005D9BCC /* LYZanListView.m */,
+			);
+			path = ZanList;
+			sourceTree = "<group>";
+		};
+		B1F39FC71D630B67004565F1 /* AppraiseList */ = {
+			isa = PBXGroup;
+			children = (
+				B1F39FC81D630B9D004565F1 /* LYAppraiseListTableCell.h */,
+				B1F39FC91D630B9D004565F1 /* LYAppraiseListTableCell.m */,
+				B1F39FCA1D630B9D004565F1 /* LYAppraiseListTableCell.xib */,
+			);
+			path = AppraiseList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F39FCC1D630B9D004565F1 /* LYAppraiseListTableCell.xib in Resources */,
 				B15A11B51D34F19100067AB3 /* main_test.jpg in Resources */,
 				B1260E8E1D3639DB005B68F4 /* main_address@2x.png in Resources */,
 				B1260E9B1D363C3C005B68F4 /* main_zan@3x.png in Resources */,
@@ -368,10 +408,14 @@
 			files = (
 				B15A11841D34CA6400067AB3 /* AppDelegate.m in Sources */,
 				B15A11B21D34E2F600067AB3 /* LYBaseTableController.m in Sources */,
+				B1CDF0841D62FF0E005D9BCC /* LYZanListView.m in Sources */,
 				B17857AD1D377E5700CD28D3 /* LYFriendDynamicModel.m in Sources */,
 				B17857B01D378E2E00CD28D3 /* NSString+Category.m in Sources */,
 				B1260E881D3627D6005B68F4 /* LYMainTableViewCell.m in Sources */,
 				B15A11AC1D34DEBB00067AB3 /* LYBaseController.m in Sources */,
+				B1F39FCF1D631390004565F1 /* LYAppraiseModel.m in Sources */,
+				B1CDF0871D62FF21005D9BCC /* HYCollectViewAlignedLayout.m in Sources */,
+				B1F39FCB1D630B9D004565F1 /* LYAppraiseListTableCell.m in Sources */,
 				B15A11811D34CA6400067AB3 /* main.m in Sources */,
 				B1260E9E1D364479005B68F4 /* LYMainViewHeightManager.m in Sources */,
 				B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */,

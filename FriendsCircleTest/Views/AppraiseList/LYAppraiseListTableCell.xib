@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="LYAppraiseListTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_test.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-xk-ats">
+                        <rect key="frame" x="15" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="FfK-Gn-rmp"/>
+                            <constraint firstAttribute="width" constant="40" id="euy-Ma-aNF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-qa-QJw">
+                        <rect key="frame" x="63" y="17" width="249" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="JJD-mp-yBH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论内容评论内容评论内容评论内容评论内容内容评论内容评论内容评论内容评论内容评论内容评论内容内容评论内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evj-Wb-Q3s">
+                        <rect key="frame" x="63" y="37" width="249" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="evj-Wb-Q3s" secondAttribute="bottom" constant="-0.5" id="9KH-9V-B8l"/>
+                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="top" secondItem="ebu-qa-QJw" secondAttribute="bottom" constant="5" id="DJh-l7-eTy"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="Imj-j2-CEc"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="NKE-4v-5Q7"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="O3f-rH-3wF"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="sWR-F6-dT3"/>
+                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="t7u-bX-6XW"/>
+                    <constraint firstItem="bsl-xk-ats" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="uYi-Vl-S7R"/>
+                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="vAL-LF-ucV"/>
+                    <constraint firstItem="bsl-xk-ats" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="wr3-Uo-8Q7"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="sWR-F6-dT3"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="appraiseContent" destination="evj-Wb-Q3s" id="8fe-P1-pJk"/>
+                <outlet property="appraiserHeadImg" destination="bsl-xk-ats" id="z0B-g1-WZ4"/>
+                <outlet property="appraiserNickName" destination="ebu-qa-QJw" id="P4a-sr-LFA"/>
+            </connections>
+            <point key="canvasLocation" x="336" y="229"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="main_test.jpg" width="1920" height="1200"/>
+    </resources>
+</document>

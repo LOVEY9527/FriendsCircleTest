@@ -7,10 +7,13 @@
 //
 
 #import "LYMainTableViewCell.h"
+#import "LYAppraiseListTableCell.h"
+#import "LYZanListView.h"
 
-NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUseID";
+NSString * const kMTVCIMGCollectionViewCellReUseID = @"kMTVCIMGCollectionViewCellReUseID";
+NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
 
-@interface LYMainTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface LYMainTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate>
 
 //容器视图
 @property (weak, nonatomic) IBOutlet UIView *containView;
@@ -38,6 +41,11 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
 //赞按钮
 @property (weak, nonatomic) IBOutlet UIButton *zanBtn;
 
+//点赞类表视图
+@property (weak, nonatomic) IBOutlet LYZanListView *zanListView;
+//评论列表视图
+@property (weak, nonatomic) IBOutlet UITableView *appraiseListTable;
+
 //动态模型
 @property (strong, nonatomic) LYFriendDynamicModel *friendDynamicModel;
 
@@ -63,13 +71,27 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
     self.dynamicContentLabel.font = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];
     
     //图片网格
-    self.imgCollectionView.scrollsToTop = NO;
     self.imgCollectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.imgCollectionViewLayout.minimumLineSpacing = kMVHMMiniumInterLineItemSpace;
     self.imgCollectionViewLayout.minimumInteritemSpacing = kMVHMMiniumInterLineItemSpace;
+    self.imgCollectionView.scrollsToTop = NO;
     self.imgCollectionView.dataSource = self;
     self.imgCollectionView.delegate = self;
-    [self.imgCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kMTVCCollectionViewCellReUseID];
+    [self.imgCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kMTVCIMGCollectionViewCellReUseID];
+    
+    //点赞列表视图
+    self.zanListView.height = 40;
+    
+    //评论列表视图
+    self.appraiseListTable.height = 100;
+    self.appraiseListTable.dataSource = self;
+    self.appraiseListTable.delegate = self;
+//    self.appraiseListTable.estimatedRowHeight = MAXFLOAT;
+    [self.appraiseListTable registerNib:[UINib nibWithNibName:NSStringFromClass([LYAppraiseListTableCell class]) bundle:nil]
+                 forCellReuseIdentifier:kMTVCAppraiseListCellReUseID];
+    self.appraiseListTable.backgroundColor = UIColorFromRGB(0xf7f7f7);
+    self.appraiseListTable.scrollsToTop = NO;
+    self.appraiseListTable.scrollEnabled = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -96,12 +118,30 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
     self.dynamicContentLabel.text = self.friendDynamicModel.dynamicContent;
     
     //图片网格
+    self.imgCollectionView.top = self.dynamicContentLabel.bottom + 10;
     self.imgCollectionView.height = [LYMainViewHeightManager mainCellImgCollectionViewHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
 //    if ([self.friendDynamicModel.dynamicImgArray count] > 0)
 //    {
     self.imgCollectionViewLayout.itemSize = [LYMainViewHeightManager mainCellImgCollectionCellHeightWithCount:[self.friendDynamicModel.dynamicImgArray count]];
     [self.imgCollectionView reloadData];
 //    }
+    
+    //地址视图
+    self.addressContainView.top = self.imgCollectionView.bottom + 10;
+    
+    //点赞按钮
+    self.zanBtn.top = self.imgCollectionView.bottom + 12;
+    
+    //评论按钮
+    self.appraiseBtn.top = self.imgCollectionView.bottom + 12;
+    
+    //点赞列表
+    self.zanListView.top = self.addressContainView.bottom + 12;
+    
+    //评论列表
+    self.appraiseListTable.top = self.zanListView.bottom;
+    self.appraiseListTable.height = self.friendDynamicModel.appraiseListHeight;
+    [self.appraiseListTable reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -113,11 +153,43 @@ NSString * const kMTVCCollectionViewCellReUseID = @"kMTVCCollectionViewCellReUse
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kMTVCCollectionViewCellReUseID
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kMTVCIMGCollectionViewCellReUseID
                                                                            forIndexPath:indexPath];
     cell.backgroundColor = [UIColor redColor];
     
     return cell;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.friendDynamicModel.appraiseArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LYAppraiseListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kMTVCAppraiseListCellReUseID
+                                                                    forIndexPath:indexPath];
+    if (indexPath.row < [self.friendDynamicModel.appraiseArray count])
+    {
+        LYAppraiseModel *appraiseModel = [self.friendDynamicModel.appraiseArray objectAtIndex:indexPath.row];
+        [cell buildCellWithModel:appraiseModel];
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row < [self.friendDynamicModel.appraiseArray count])
+    {
+        LYAppraiseModel *appraiseModel = [self.friendDynamicModel.appraiseArray objectAtIndex:indexPath.row];
+        return appraiseModel.appraiseCellHeight;
+    }
+    
+    return 0;
 }
 
 @end
