@@ -19,6 +19,8 @@
 
 //评论单元格的高度
 @property (assign, nonatomic) CGFloat appraiseCellHeight;
+//评论内容高度
+@property (assign, nonatomic) CGFloat appraiseContentHeight;
 
 /**
  *  @author liyong

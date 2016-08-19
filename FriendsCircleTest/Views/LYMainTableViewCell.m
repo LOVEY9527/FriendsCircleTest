@@ -61,11 +61,13 @@ NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
     
     //容器视图
     self.containView.layer.cornerRadius = 3;
-    self.containView.layer.masksToBounds = YES;
+    self.containView.layer.masksToBounds = YES;    
+//    self.containView.layer.shouldRasterize = YES;
     
     //头像
     self.headerImageView.layer.cornerRadius = self.headerImageView.width / 2;
     self.headerImageView.layer.masksToBounds = YES;
+//    self.headerImageView.layer.shouldRasterize = YES;
     
     //动态内容
     self.dynamicContentLabel.font = [UIFont systemFontOfSize:kMVHMFriendDynamicContentFontSize];

@@ -8,6 +8,8 @@
 
 #import "LYAppraiseListTableCell.h"
 
+#import "LYMainViewHeightManager.h"
+
 @interface LYAppraiseListTableCell()
 
 //评论人头像
@@ -25,6 +27,7 @@
 {
     [super awakeFromNib];
     // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -43,8 +46,12 @@
  */
 - (void)buildCellWithModel:(LYAppraiseModel *)appraiseModel
 {
+    //评论人昵称
     self.appraiserNickName.text = appraiseModel.appraiserNickName;
+    //评论内容
     self.appraiseContent.text = appraiseModel.appraiseContent;
+    self.appraiseContent.font = [UIFont systemFontOfSize:kMVHMAppraiseContentFontSize];
+//    self.appraiseContent.height = appraiseModel.appraiseContentHeight;
 }
 
 @end

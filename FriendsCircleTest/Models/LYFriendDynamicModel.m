@@ -65,7 +65,7 @@
             }else
             {
                 appraiseModel = [[LYAppraiseModel alloc] initWithAppraiseNickName:@"Lovey"
-                                                                  appraiseContent:@"评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容"];                
+                                                                  appraiseContent:@"评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论"];
             }
             [self.appraiseArray addObject:appraiseModel];
         }

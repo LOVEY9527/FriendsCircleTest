@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,14 +17,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_test.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-xk-ats">
                         <rect key="frame" x="15" y="10" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="FfK-Gn-rmp"/>
-                            <constraint firstAttribute="width" constant="40" id="euy-Ma-aNF"/>
+                            <constraint firstAttribute="width" constant="40" id="0QE-bb-d3u"/>
+                            <constraint firstAttribute="height" constant="40" id="QUQ-zA-83h"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-qa-QJw">
                         <rect key="frame" x="63" y="17" width="249" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="JJD-mp-yBH"/>
+                            <constraint firstAttribute="height" constant="15" id="PcJ-Gt-6lC"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,22 +38,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="evj-Wb-Q3s" secondAttribute="bottom" constant="-0.5" id="9KH-9V-B8l"/>
-                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="top" secondItem="ebu-qa-QJw" secondAttribute="bottom" constant="5" id="DJh-l7-eTy"/>
-                    <constraint firstItem="ebu-qa-QJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="Imj-j2-CEc"/>
-                    <constraint firstItem="ebu-qa-QJw" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="NKE-4v-5Q7"/>
-                    <constraint firstItem="ebu-qa-QJw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="O3f-rH-3wF"/>
-                    <constraint firstItem="ebu-qa-QJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="sWR-F6-dT3"/>
-                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="t7u-bX-6XW"/>
-                    <constraint firstItem="bsl-xk-ats" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="uYi-Vl-S7R"/>
-                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="vAL-LF-ucV"/>
-                    <constraint firstItem="bsl-xk-ats" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="wr3-Uo-8Q7"/>
+                    <constraint firstItem="bsl-xk-ats" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GjF-8Q-akx"/>
+                    <constraint firstItem="bsl-xk-ats" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="H8W-qZ-as1"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="UrR-8N-rAF"/>
+                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="top" secondItem="ebu-qa-QJw" secondAttribute="bottom" constant="5" id="bBm-vs-r42"/>
+                    <constraint firstAttribute="trailing" secondItem="ebu-qa-QJw" secondAttribute="trailing" constant="8" id="iGc-Ff-cne"/>
+                    <constraint firstItem="ebu-qa-QJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="mAM-s8-NlX"/>
+                    <constraint firstAttribute="trailing" secondItem="evj-Wb-Q3s" secondAttribute="trailing" constant="8" id="mYb-Qy-ZlB"/>
+                    <constraint firstItem="evj-Wb-Q3s" firstAttribute="leading" secondItem="bsl-xk-ats" secondAttribute="trailing" constant="8" id="tDQ-k7-F61"/>
+                    <constraint firstAttribute="bottom" secondItem="evj-Wb-Q3s" secondAttribute="bottom" constant="7.5" id="xMf-VT-pjA"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="sWR-F6-dT3"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="appraiseContent" destination="evj-Wb-Q3s" id="8fe-P1-pJk"/>
