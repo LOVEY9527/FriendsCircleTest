@@ -153,7 +153,7 @@ CGFloat const kMVHMAppraiseContentFontSize = 14.0;
 {
     CGFloat appraiseContentHeight = [self mainCellAppraiseContentHeightWithModel:appraiseModel];
     appraiseModel.appraiseContentHeight = appraiseContentHeight;
-    CGFloat totalAppraiseHeight = 17 + 15 + 5 + appraiseContentHeight + 8;
+    CGFloat totalAppraiseHeight = 17 + 15 + 5 + appraiseContentHeight + 8 + 1;
     if (totalAppraiseHeight < 60)
     {
         totalAppraiseHeight = 60;
