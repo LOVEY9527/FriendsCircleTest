@@ -14,7 +14,7 @@
 NSString * const kMTVCIMGCollectionViewCellReUseID = @"kMTVCIMGCollectionViewCellReUseID";
 NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
 
-@interface LYMainTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate>
+@interface LYMainTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate, LYAppraiseTextFieldDelegate>
 
 //容器视图
 @property (weak, nonatomic) IBOutlet UIView *containView;
@@ -39,6 +39,8 @@ NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
 
 //评论按钮
 @property (weak, nonatomic) IBOutlet UIButton *appraiseBtn;
+//评论输入框
+@property (strong, nonatomic) LYAppraiseTextField *appraiseTextField;
 //赞按钮
 @property (weak, nonatomic) IBOutlet UIButton *zanBtn;
 
@@ -113,8 +115,16 @@ NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
  */
 - (IBAction)appraiseBtnClick:(id)sender
 {
-    [LYAppraiseTextField showAppraiseTextFieldWithDelegate:self
-                                               containView:[[UIApplication sharedApplication] keyWindow]];
+    if (!self.appraiseBtn.isSelected)
+    {
+        self.appraiseTextField = [LYAppraiseTextField showAppraiseTextFieldWithDelegate:self
+                                                                            containView:[[UIApplication sharedApplication] keyWindow]];
+    }else
+    {
+        [self.appraiseTextField dismiss];
+    }
+    
+    [self.appraiseBtn setSelected:!self.appraiseBtn.isSelected];
 }
 
 /**
@@ -206,6 +216,13 @@ NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
     }
     
     return 0;
+}
+
+#pragma MARK - LYAppraiseTextFieldDelegate
+
+- (void)appraiseTextField:(LYAppraiseTextField *)appraiseTextField didReturnWithText:(NSString *)text
+{
+    NSLog(@"text:%@", text);
 }
 
 @end

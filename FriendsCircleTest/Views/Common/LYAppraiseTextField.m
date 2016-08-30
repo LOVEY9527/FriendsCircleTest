@@ -13,6 +13,8 @@ CGFloat const kATFHeight = 40;
 
 @interface LYAppraiseTextField()<UITextFieldDelegate>
 
+@property (assign, nonatomic) id<LYAppraiseTextFieldDelegate> delegate;
+
 //输入框动画时间
 @property (assign, nonatomic) CGFloat animationDuring;
 
@@ -26,16 +28,22 @@ CGFloat const kATFHeight = 40;
 /**
  *  @author li_yong
  *
- *  显示评论输入框
+ *  显示输入框
  *
- *  @param delegate 代理
+ *  @param delegate         代理
+ *  @param containSuperView 容器视图
+ *
+ *  @return
  */
-+ (void)showAppraiseTextFieldWithDelegate:(id<LYAppraiseTextFieldDelegate>)delegate
-                              containView:(UIView *)containSuperView
++ (LYAppraiseTextField *)showAppraiseTextFieldWithDelegate:(id<LYAppraiseTextFieldDelegate>)delegate
+                                               containView:(UIView *)containSuperView
 {
     LYAppraiseTextField *appraiseTextField = [[LYAppraiseTextField alloc] initWithFrame:CGRectMake(0, App_Frame_Height - 40, App_Frame_Width, 40)];
+    appraiseTextField.delegate = delegate;
     [appraiseTextField show];
     [containSuperView addSubview:appraiseTextField];
+    
+    return appraiseTextField;
 }
 
 - (void)dealloc
@@ -168,6 +176,11 @@ CGFloat const kATFHeight = 40;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self dismiss];
+    
+    if ([self.delegate respondsToSelector:@selector(appraiseTextField:didReturnWithText:)])
+    {
+        [self.delegate appraiseTextField:self didReturnWithText:textField.text];
+    }
     
     return YES;
 }

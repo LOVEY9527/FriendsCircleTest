@@ -15,12 +15,29 @@
 /**
  *  @author li_yong
  *
- *  弹出评论输入框
+ *  显示输入框
  *
  *  @param delegate         代理
- *  @param containSuperView 存放输入框的容器视图
+ *  @param containSuperView 容器视图
+ *
+ *  @return
  */
-+ (void)showAppraiseTextFieldWithDelegate:(id<LYAppraiseTextFieldDelegate>)delegate
-                              containView:(UIView *)containSuperView;
++ (LYAppraiseTextField *)showAppraiseTextFieldWithDelegate:(id<LYAppraiseTextFieldDelegate>)delegate
+                                               containView:(UIView *)containSuperView;
+
+/**
+ *  @author li_yong
+ *
+ *  隐藏
+ */
+- (void)dismiss;
+
+@end
+
+@protocol LYAppraiseTextFieldDelegate <NSObject>
+
+@optional
+
+- (void)appraiseTextField:(LYAppraiseTextField *)appraiseTextField didReturnWithText:(NSString *)text;
 
 @end
