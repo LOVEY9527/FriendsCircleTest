@@ -110,7 +110,7 @@ NSString * const kMCTableViewCellReUseID = @"kLMCTableViewCellReUseID";
 //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:tableViewCellReUseID];
     self.tableView.backgroundColor = UIColorFromRGB(0xececec);
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LYMainTableViewCell class]) bundle:nil] forCellReuseIdentifier:kMCTableViewCellReUseID];
-    self.tableView.rowHeight = 237;
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 

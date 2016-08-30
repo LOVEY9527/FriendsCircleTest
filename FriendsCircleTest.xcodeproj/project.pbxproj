@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013F99431D6AE32C00D532FC /* LYAppraiseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 013F99421D6AE32C00D532FC /* LYAppraiseTextField.m */; };
 		B1260E881D3627D6005B68F4 /* LYMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1260E861D3627D6005B68F4 /* LYMainTableViewCell.m */; };
 		B1260E891D3627D6005B68F4 /* LYMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1260E871D3627D6005B68F4 /* LYMainTableViewCell.xib */; };
 		B1260E8E1D3639DB005B68F4 /* main_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1260E8C1D3639DB005B68F4 /* main_address@2x.png */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		013F99411D6AE32C00D532FC /* LYAppraiseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAppraiseTextField.h; sourceTree = "<group>"; };
+		013F99421D6AE32C00D532FC /* LYAppraiseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAppraiseTextField.m; sourceTree = "<group>"; };
 		B1260E851D3627D6005B68F4 /* LYMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainTableViewCell.h; sourceTree = "<group>"; };
 		B1260E861D3627D6005B68F4 /* LYMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainTableViewCell.m; sourceTree = "<group>"; };
 		B1260E871D3627D6005B68F4 /* LYMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMainTableViewCell.xib; sourceTree = "<group>"; };
@@ -115,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013F99401D6AE30B00D532FC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				013F99411D6AE32C00D532FC /* LYAppraiseTextField.h */,
+				013F99421D6AE32C00D532FC /* LYAppraiseTextField.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B1260E8A1D3632D6005B68F4 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 		B15A11A71D34DD1A00067AB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				013F99401D6AE30B00D532FC /* Common */,
 				B1CDF0811D62FF0E005D9BCC /* ZanList */,
 				B1F39FC71D630B67004565F1 /* AppraiseList */,
 				B1260E851D3627D6005B68F4 /* LYMainTableViewCell.h */,
@@ -420,6 +433,7 @@
 				B1260E9E1D364479005B68F4 /* LYMainViewHeightManager.m in Sources */,
 				B15A11BA1D34F2C600067AB3 /* UIViewExt.m in Sources */,
 				B15A11AF1D34DF8B00067AB3 /* LYMainController.m in Sources */,
+				013F99431D6AE32C00D532FC /* LYAppraiseTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

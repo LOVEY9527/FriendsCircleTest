@@ -9,6 +9,7 @@
 #import "LYMainTableViewCell.h"
 #import "LYAppraiseListTableCell.h"
 #import "LYZanListView.h"
+#import "LYAppraiseTextField.h"
 
 NSString * const kMTVCIMGCollectionViewCellReUseID = @"kMTVCIMGCollectionViewCellReUseID";
 NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
@@ -101,6 +102,19 @@ NSString * const kMTVCAppraiseListCellReUseID = @"kMTVCAppraiseListCellReUseID";
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+/**
+ *  @author li_yong
+ *
+ *  评论按钮点击事件
+ *
+ *  @param sender
+ */
+- (IBAction)appraiseBtnClick:(id)sender
+{
+    [LYAppraiseTextField showAppraiseTextFieldWithDelegate:self
+                                               containView:[[UIApplication sharedApplication] keyWindow]];
 }
 
 /**
